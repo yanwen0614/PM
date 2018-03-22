@@ -1,0 +1,33 @@
+﻿<Page x:Class="PM.View.lblset"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PM.View"
+      mc:Ignorable="d" 
+     
+      Title="lblset" Foreground="{x:Null}">
+    <Grid Margin="10" MinWidth="700" MinHeight="600">
+        <!--<Line StrokeThickness="2" Stroke="#FF707070"  Y1="0" Y2="99999" HorizontalAlignment="Center" VerticalAlignment="Stretch" Visibility="Hidden"/>-->
+        <GroupBox Margin="25,20,0,0" Foreground="{x:Null}" VerticalContentAlignment="Center" Height="275" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" >
+            <GroupBox.Header>
+                <TextBlock Text="网站设定" Foreground="#FF000000"/>
+            </GroupBox.Header>
+            <Grid Margin="-4,-5,-4,-4">
+                <CheckBox Content="国家应急广播" HorizontalAlignment="Left" Margin="16,15,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="凤凰网" HorizontalAlignment="Left" Margin="16,40,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="网易新闻" HorizontalAlignment="Left" Margin="16,65,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="新浪新闻" HorizontalAlignment="Left" Margin="16,90,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="搜狐新闻" HorizontalAlignment="Left" Margin="16,115,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="天涯论坛" HorizontalAlignment="Left" Margin="16,140,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="微信文章" HorizontalAlignment="Left" Margin="16,165,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="新华网" HorizontalAlignment="Left" Margin="16,190,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="16,215,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+            </Grid>
+        </GroupBox>
+        <Label Content="间隔" HorizontalAlignment="Left" Margin="25,325,0,0" Width="50" Height="25" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="79,323,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="30" TextChanged="TextBox_TextChanged"/>
+        <CheckBox Content="" HorizontalAlignment="Left" Height="40" Margin="124,353,0,0" VerticalAlignment="Top" Width="42"/>
+        <Label Content="采集过程可视" HorizontalAlignment="Left" Margin="25,359,0,0" VerticalAlignment="Top" Width="82"/>
+    </Grid>
+</Page>

@@ -1,0 +1,43 @@
+﻿<Controls:MetroWindow x:Class="PM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PM"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        ResizeMode="CanResizeWithGrip"
+        BorderThickness="0" 
+        WindowStartupLocation="CenterScreen"
+        GlowBrush="{DynamicResource AccentColorBrush}" MinWidth="1000" MinHeight="700"
+        >
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="settings" />
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cupcake}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <Grid>
+        <Line X1="100" Y1="0" X2="100" Y2="99999" StrokeThickness="1" Stroke="#FF707070"/>
+        <Label Name="lblmap"  Content="地图" HorizontalAlignment="Left" Margin="0,150,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="40" MouseDown="Label_MouseDown" Background="Transparent" FontSize="18"/>
+        <Label Name="lblcol" Content="收集" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="40" MouseDown="Label_MouseDown" FontSize="18"/>
+        <Label Name="lblstc" Content="统计" HorizontalAlignment="Left" Margin="0,110,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="40" MouseDown="Label_MouseDown" FontSize="18"/>
+        <Label Name="lblret" Content="结果" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="40" MouseDown="Label_MouseDown" FontSize="18"/>
+        <Frame Name="frame" Content="Frame"  Margin="100,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" NavigationUIVisibility="Hidden" MinWidth="900" MinHeight="600"/>
+        <Label Name="lblset" Content="设置" HorizontalAlignment="Left" Margin="0,220,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="40" MouseDown="Label_MouseDown" FontSize="18" Visibility="Hidden"/>
+    </Grid>
+</Controls:MetroWindow>

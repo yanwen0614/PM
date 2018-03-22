@@ -1,0 +1,45 @@
+﻿<Page x:Class="PM.View.lblstc"
+       x:Name="Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PM.View"
+      mc:Ignorable="d"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      Title="lblstc" MinWidth="700" MinHeight="600" Unloaded="Page_Unloaded">
+
+    <Grid x:Name="grid" Margin="0">
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="0" Width="160">
+            <GroupBox Height="169" Margin="7,10,9,0" VerticalAlignment="Top">
+                <GroupBox.Header>
+                    <TextBlock Text="时间" Foreground="#FF000000"/>
+                </GroupBox.Header>
+                <Grid  Margin="0,0,0,0" >
+                    <DatePicker x:Name="StartDate" HorizontalAlignment="Left" Margin="9,30,0,79" Width="120"  SelectedDateChanged="StartDate_SelectedDateChanged"/>
+                    <DatePicker x:Name="EndDate" HorizontalAlignment="Left" Margin="12,91,0,18" VerticalAlignment="Center" Height="13" Width="120" SelectedDateChanged="EndDate_SelectedDateChanged"/>
+                    <Label Content="开始日期" HorizontalAlignment="Left" Margin="1,3,0,107" VerticalAlignment="Center"/>
+                    <Label Content="结束日期" HorizontalAlignment="Left" Margin="7,61,0,49" VerticalAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <Label Content="类别" HorizontalAlignment="Left" Margin="11,196,0,0" VerticalAlignment="Top" Width="69" Visibility="Hidden"/>
+            <Button Content="确定" HorizontalAlignment="Left" Height="39" Margin="24,246,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
+        </Grid>
+        <Grid   x:Name="grid2" Margin="160,0,0,0">
+            <Label Content="折线图" HorizontalAlignment="Left" Margin="30,21,0,0" VerticalAlignment="Top"/>
+            <lvc:CartesianChart x:Name="linechart" Grid.Row="2"  LegendLocation="Right" Margin="40,50,40,0" Height="250" VerticalAlignment="Top" >
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Date" LabelFormatter="{Binding XFormatter}">
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Case Num" LabelFormatter="{Binding YFormatter}">
+
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+            <lvc:PieChart x:Name="piechart"  DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}"  LegendLocation="Right" Margin="40,0,40,30" Height="250" VerticalAlignment="Bottom" >
+            </lvc:PieChart>
+        </Grid>
+    </Grid>
+</Page>

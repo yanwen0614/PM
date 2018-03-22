@@ -1,0 +1,80 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <div id="container" ></div>
+
+    <script>
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            zoom: 5,
+            zooms: [4, 18],
+            center: [106.485352, 34.603692]
+        });
+        AMap.plugin(['AMap.ToolBar', 'AMap.Scale', 'AMap.MapType'],
+            function () {
+                map.addControl(new AMap.ToolBar());
+                map.addControl(new AMap.Scale());
+                map.addControl(new AMap.MapType());
+            });
+       
+        var createMarker = function (data) {
+            //var r = Math.floor(data.count / 1024);
+            var Imagepath = '';
+            switch(data.Casetype){
+                    case 1:
+                    Imagepath = "/static/icon/mark_b.png"
+                        break;
+                    case 2:
+                    Imagepath = "/static/icon/mark_g.png"
+                        break;
+                    case 3:
+                    Imagepath = "/static/icon/mark_r.png"
+                        break;
+                    case 4:
+                    Imagepath = "/static/icon/mark_y.png"
+                        break;
+                }
+            var marker = new AMap.Marker({
+                icon: Imagepath,
+                position: [data.Coorrdinates[0],data.Coorrdinates[1]],
+                extData: {
+                    "id":data.id,
+                    "weburl":data.WebUrl,
+                    "Casetype":data.Casetype,
+                    "address": data.Address,
+                    "title": data.Title,
+                    "colectiontime":data.CollectTime,
+                }
+            });
+            return marker;
+        };
+        var infoWindow = new AMap.InfoWindow({offset:new AMap.Pixel(0,-30)});
+        var _onClick = function(e){
+           // window.open(e.target.getExtData().weburl); 
+            var ext = e.target.getExtData();
+            var info = [];
+            info.push("标题:" + ext.title)
+            info.push("类别:" + ext.Casetype)
+            info.push("地点:" + ext.address)
+            info.push("发布时间:" + ext.colectiontime)
+            
+            info.push("原始网页：<a href='"+ext.weburl+"'target='_blank'>"+ext.weburl+"</a>")
+            infoWindow.setContent(info.join("<br>"));
+            infoWindow.open(map, e.target.getPosition());
+        };
+        var myGeocode = {{ cases|safe }};
+        for (let index = 0; index < myGeocode.length; index++) {
+            const element = myGeocode[index];
+            if (element.Coorrdinates[0]==-1 || element.Casetype ==0) {
+                    continue;
+                }
+            var marker = createMarker(element);
+            marker.setMap(map)
+            AMap.event.addListener(marker, 'click', _onClick);
+            };
+    </script>
+
+    {% endblock %}
+

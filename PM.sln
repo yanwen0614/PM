@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PM", "PM\PM.csproj", "{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMTests", "PMTests\PMTests.csproj", "{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WebMap", "WebMap\WebMap.pyproj", "{720273ED-59C5-4D70-A516-B9150DC665AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Debug|x64.ActiveCfg = Debug|x64
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Debug|x64.Build.0 = Debug|x64
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Release|x64.ActiveCfg = Release|x64
+		{A1FA87B0-61A3-49D4-B782-E4422C7B05E9}.Release|x64.Build.0 = Release|x64
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Debug|x64.ActiveCfg = Debug|x64
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Debug|x64.Build.0 = Debug|x64
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Release|x64.ActiveCfg = Release|x64
+		{CE5308E7-72E4-4963-AAD1-124F1ACE37FA}.Release|x64.Build.0 = Release|x64
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{720273ED-59C5-4D70-A516-B9150DC665AB}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64F61D86-EFCF-4383-AA98-1E84E76C9267}
+	EndGlobalSection
+EndGlobal
